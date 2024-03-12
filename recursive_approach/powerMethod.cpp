@@ -12,15 +12,15 @@ double findAbsLargest(double* mat, unsigned int size){
 }
 
 double getAbsError(double* A, double* B, unsigned int size){
-    double difference = A[0] - B[0];
+    double max_difference = 0.0;
     for (size_t i = 0; i < size; i++)
     {
-        double d = A[i] - B[i];
-        if(std::abs(difference) <std::abs(d)) difference = d;
+        double d = std::abs(A[i] - B[i]);
+        if(max_difference <d) max_difference = d;
     }
-    return std::abs(difference);
-    
+    return max_difference;
 }
+
 
 double powerMethod(double** A, unsigned int size, double* X = nullptr){
     if(X == nullptr){
