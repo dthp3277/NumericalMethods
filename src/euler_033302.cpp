@@ -19,7 +19,7 @@ double euler(double stepSize, double x0, double y0, double xValue, double(*ODE)(
     cout<<endl;
     cout<<setw(10)<<'x'<<setw(10)<<'y'<<setw(10)<<endl;
     do {
-        s = ODE(x, y);
+        s = ODE(x, y);  
         cout<<setw(10)<<x<<setw(10)<<y<<endl;
         y = y + stepSize * s;
         x+=stepSize;

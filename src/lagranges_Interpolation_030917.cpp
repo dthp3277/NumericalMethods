@@ -16,6 +16,7 @@ double lagrangesInterpolate(vector<pair<double, double>> data, double xP) {
         }
         product *= data[i].second;
         sum += product;
+        cout<<"in iteration "<<i<<" the product is: "<<product<<endl;
     }
     return sum;
 }
