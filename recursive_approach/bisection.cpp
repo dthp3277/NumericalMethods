@@ -13,7 +13,7 @@ double bisection(double a, double b, double tolerance, unsigned int maxIter) {
     
     double c = (a + b) / 2;
 
-    if (b - a < tolerance)
+    if (std::abs(b - a) < tolerance)
         return c;
 
     if (f(c) == 0)
