@@ -18,14 +18,14 @@ double euler(double stepSize, double x0, double y0, double xValue, double(*ODE)(
     unsigned int count = 0;
     cout<<endl;
     cout<<setw(10)<<'x'<<setw(10)<<'y'<<setw(10)<<endl;
+    cout<<setw(10)<<x<<setw(10)<<y<<endl;
     do {
         s = ODE(x, y);  
-        cout<<setw(10)<<x<<setw(10)<<y<<endl;
         y = y + stepSize * s;
         x+=stepSize;
+        cout<<setw(10)<<x<<setw(10)<<y<<endl;
         count++;
-
-    } while(x <= xValue);
+    } while(x < xValue);
     return y;
 }
 
