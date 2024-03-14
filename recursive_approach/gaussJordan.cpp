@@ -1,5 +1,8 @@
 #include <iostream>
 
+/// @param n Number of linear equations 
+/// @param curr Column with the pivot element currently operated upon
+/// @param i Row being eliminated
 void eliminate(double** aug, unsigned int n, unsigned int curr, unsigned int i = 0) {
     if (i == n) return;
     if (i != curr) {
